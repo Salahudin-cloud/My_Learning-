@@ -1,18 +1,17 @@
 package kasus;
 
-import java.util.Scanner; 
+import java.util.Scanner;
+
 public class debug {
     public static void main(String[] args) {
-        int x = 10 ; 
-        int y = 20 ; 
-        String input ; 
-        Scanner scan = new Scanner(System.in); 
-        if (x > 5 ) {
-            if(y > 10) {
-                System.out.println("masukan nama : "); 
-                input = scan.nextLine(); 
-                System.out.println(input); 
-            }
+        String input;
+        System.out.printf("masukan angka(tanpa spasi) : ");
+        input = new Scanner(System.in).nextLine();
+        char kata;
+        int i = input.length() - 1;
+        for (int j = i; j >= 0; j--) {
+            kata = input.charAt(j);
+            System.out.print(kata);
         }
     }
 }
